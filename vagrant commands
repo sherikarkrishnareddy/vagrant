@@ -1,0 +1,76 @@
+kittu@DESKTOP-S4I5703 MINGW64 ~/vagrant-files/centos7
+$ mkdir vagrant-files
+$ cd vagrant-files
+$ mkdir centos7
+$ mkdir ubuntu18
+$ cd centos7
+$ vagrant init geerlingguy/centos7
+
+
+kittu@DESKTOP-S4I5703 MINGW64 ~/vagrant-files/centos7
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'geerlingguy/centos7' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Loading metadata for box 'geerlingguy/centos7'
+    default: URL: https://vagrantcloud.com/geerlingguy/centos7
+==> default: Adding box 'geerlingguy/centos7' (v1.2.26) for provider: virtualbox
+    default: Downloading: https://vagrantcloud.com/geerlingguy/boxes/centos7/versions/1.2.26/providers/virtualbox.box
+    default:
+==> default: Successfully added box 'geerlingguy/centos7' (v1.2.26) for 'virtualbox'!
+==> default: Importing base box 'geerlingguy/centos7'...
+==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'geerlingguy/centos7' version '1.2.26' is up to date...
+==> default: Setting the name of the VM: centos7_default_1669228330201_49044
+Vagrant is currently configured to create VirtualBox synced folders with
+the `SharedFoldersEnableSymlinksCreate` option enabled. If the Vagrant
+guest is not trusted, you may want to disable this option. For more
+information on this option, please refer to the VirtualBox manual:
+
+  https://www.virtualbox.org/manual/ch04.html#sharedfolders
+
+This option can be disabled globally with an environment variable:
+
+  VAGRANT_DISABLE_VBOXSYMLINKCREATE=1
+
+or on a per folder basis within the Vagrantfile:
+
+  config.vm.synced_folder '/host/path', '/guest/path', SharedFoldersEnableSymlinksCreate: false
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default:
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default:
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if it's present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+==> default: Mounting shared folders...
+    default: /vagrant => C:/Users/kittu/vagrant-files/centos7
+
+kittu@DESKTOP-S4I5703 MINGW64 ~/vagrant-files/centos7
+$ vagrant ssh
+[vagrant@localhost ~]$ clear
+[vagrant@localhost ~]$ exit
+logout
+
+kittu@DESKTOP-S4I5703 MINGW64 ~/vagrant-files/centos7
+$ vgrant halt
+bash: vgrant: command not found
+
+kittu@DESKTOP-S4I5703 MINGW64 ~/vagrant-files/centos7
+$ vagrant halt
+==> default: Attempting graceful shutdown of VM...
+
+kittu@DESKTOP-S4I5703 MINGW64 ~/vagrant-files/centos7
